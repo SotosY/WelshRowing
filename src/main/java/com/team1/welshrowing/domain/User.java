@@ -43,6 +43,7 @@ public class User {
     /**
      * The password of the user.
      */
+    @Size (min = 8, message = "Password must be minimum 8 characters")
     @Pattern(regexp = ".*[a-z].*", message="Password must contain lower-case")
     @Pattern(regexp = ".*[A-Z.].*", message="Password must contain upper-case")
     @Pattern(regexp = ".*[\\d].*", message="Password must contain a number")
