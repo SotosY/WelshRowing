@@ -36,7 +36,7 @@ public class RPE {
     private Date dateofTest;
 
     @NotNull(message = "This field cannot be null")
-    @ColumnTransformer(read = "cast(aes_decrypt(typeof_session, 'J9DVC?n(') as char(255))")
+//    @ColumnTransformer(read = "cast(aes_decrypt(typeof_session, 'J9DVC?n(') as char(255))")
     private String typeofSession;
 
     @NotNull(message = "This field cannot be null")
