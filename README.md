@@ -4,10 +4,10 @@
 
 ```bash
 # Clone the repository
-git clone https://git.cardiff.ac.uk/c1741189/welshrowing_team1.git
+git clone https://git.cardiff.ac.uk/c1847017/welshrowing_team1_CAJ
 
 # Go inside the directory
-cd welshrowing_team1
+cd welshrowing_team1_CAJ
 
 # Build the server
 ./gradlew build
