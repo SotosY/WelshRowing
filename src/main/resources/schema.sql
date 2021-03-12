@@ -166,3 +166,5 @@ CREATE TABLE IF NOT EXISTS `xtraining` (
                              PRIMARY KEY (`x_training_id`),
                              CONSTRAINT `FKdb74vuuxar81ex6o6sksjmqdc` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 );
+
+INSERT INTO user VALUES(3, 'coach@test.com', TRUE, '$2a$10$SrjqKixCIbBg1Yyo2Sc1I.lqM9LUixH8z9uXiTSUqis3qRB45tIF6', 'COACH', 'coach');
