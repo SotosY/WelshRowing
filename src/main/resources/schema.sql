@@ -1,5 +1,3 @@
-CREATE SCHEMA `welshrowing`;
-USE `welshrowing`;
 
 CREATE TABLE IF NOT EXISTS `user` (
     `user_id` bigint(20) AUTO_INCREMENT,
