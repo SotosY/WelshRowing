@@ -1,6 +1,4 @@
-
-CREATE SCHEMA `welshrowing`;
-USE `welshrowing`;
+CREATE SCHEMA IF NOT EXISTS `welshrowing`;
 
 CREATE TABLE IF NOT EXISTS `user` (
     `user_id` bigint(20) AUTO_INCREMENT,
