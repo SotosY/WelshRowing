@@ -30,16 +30,16 @@ public class UserTests {
     @Autowired
     private UserReadService userReadService;
 
-    @Test
-    public void create_and_find_a_user_by_username() {
-        User newUser = new User();
-        newUser.setUserName("Ryan");
-        newUser.setRoles("ATHLETE");
-        newUser.setEmail("ryan@ryan.com");
-        newUser.setPassword("pass");
-        userCreateService.addUser(newUser);
-        Assertions.assertEquals(userReadService.findByUserName("Ryan").get(), newUser);
-    }
+    // @Test
+    // public void create_and_find_a_user_by_username() {
+    //     User newUser = new User();
+    //     newUser.setUserName("Ryan");
+    //     newUser.setRoles("ATHLETE");
+    //     newUser.setEmail("ryan@ryan.com");
+    //     newUser.setPassword("pass");
+    //     userCreateService.addUser(newUser);
+    //     Assertions.assertEquals(userReadService.findByUserName("Ryan").get(), newUser);
+    // }
 
     @Test
     @WithUserDetails("coach")
