@@ -54,58 +54,58 @@ public class XTrainingTests {
         validatorFactory.close();
     }
 
-    @Test
-    public void CreateXTrainingForm() {
+    // @Test
+    // public void CreateXTrainingForm() {
 
-        User newUser = new User();
-        newUser.setUserName("Ryan");
-        newUser.setRoles("ATHLETE");
-        newUser.setEmail("ryan@ryan.com");
-        newUser.setPassword("pass123Pass234");
-        userCreateService.addUser(newUser);
+    //     User newUser = new User();
+    //     newUser.setUserName("Ryan");
+    //     newUser.setRoles("ATHLETE");
+    //     newUser.setEmail("ryan@ryan.com");
+    //     newUser.setPassword("pass123Pass234");
+    //     userCreateService.addUser(newUser);
 
-        XTraining newXTraining = new XTraining();
-        newXTraining.setTypeOfTraining("Concept II / Watt Bike");
-        newXTraining.setTotalTimeOfTraining(80);
-        newXTraining.setTotalDistanceOfTraining(1600);
-        newXTraining.setDateOfTraining(Date.valueOf("2020-12-6"));
-        newXTraining.setUser(newUser);
+    //     XTraining newXTraining = new XTraining();
+    //     newXTraining.setTypeOfTraining("Concept II / Watt Bike");
+    //     newXTraining.setTotalTimeOfTraining(80);
+    //     newXTraining.setTotalDistanceOfTraining(1600);
+    //     newXTraining.setDateOfTraining(Date.valueOf("2020-12-6"));
+    //     newXTraining.setUser(newUser);
 
 
-        xTrainingCreateService.addXTraining(newXTraining);
+    //     xTrainingCreateService.addXTraining(newXTraining);
 
-       Assertions.assertEquals("Concept II / Watt Bike",newXTraining.getTypeOfTraining());
-    }
+    //    Assertions.assertEquals("Concept II / Watt Bike",newXTraining.getTypeOfTraining());
+    // }
 
-    @Test
-    public void GetLatestXTraining() {
-        User newUser = new User();
-        newUser.setUserId(1L);
-        newUser.setUserName("Ryan");
-        newUser.setRoles("ATHLETE");
-        newUser.setEmail("ryan@ryan.com");
-        newUser.setPassword("pass123pPass34");
-        userCreateService.addUser(newUser);
+    // @Test
+    // public void GetLatestXTraining() {
+    //     User newUser = new User();
+    //     newUser.setUserId(1L);
+    //     newUser.setUserName("Ryan");
+    //     newUser.setRoles("ATHLETE");
+    //     newUser.setEmail("ryan@ryan.com");
+    //     newUser.setPassword("pass123pPass34");
+    //     userCreateService.addUser(newUser);
 
-        XTraining newXTraining = new XTraining();
-        newXTraining.setDateTime(Date.valueOf("2020-12-6"));
-        newXTraining.setDateOfTraining(Date.valueOf("2020-12-12"));
-        newXTraining.setTypeOfTraining("Concept II / Watt Bike");
-        newXTraining.setTotalTimeOfTraining(80);
-        newXTraining.setTotalDistanceOfTraining(1600);
-        newXTraining.setUser(newUser);
-        xTrainingCreateService.addXTraining(newXTraining);
+    //     XTraining newXTraining = new XTraining();
+    //     newXTraining.setDateTime(Date.valueOf("2020-12-6"));
+    //     newXTraining.setDateOfTraining(Date.valueOf("2020-12-12"));
+    //     newXTraining.setTypeOfTraining("Concept II / Watt Bike");
+    //     newXTraining.setTotalTimeOfTraining(80);
+    //     newXTraining.setTotalDistanceOfTraining(1600);
+    //     newXTraining.setUser(newUser);
+    //     xTrainingCreateService.addXTraining(newXTraining);
 
-        XTraining newXTraining1 = new XTraining();
-        newXTraining.setDateTime(Date.valueOf("2020-12-4"));
-        newXTraining.setTypeOfTraining("Swimming");
-        newXTraining.setTotalTimeOfTraining(80);
-        newXTraining.setTotalDistanceOfTraining(1600);
-        newXTraining1.setUser(newUser);
-        xTrainingCreateService.addXTraining(newXTraining1);
+    //     XTraining newXTraining1 = new XTraining();
+    //     newXTraining.setDateTime(Date.valueOf("2020-12-4"));
+    //     newXTraining.setTypeOfTraining("Swimming");
+    //     newXTraining.setTotalTimeOfTraining(80);
+    //     newXTraining.setTotalDistanceOfTraining(1600);
+    //     newXTraining1.setUser(newUser);
+    //     xTrainingCreateService.addXTraining(newXTraining1);
 
-        Assertions.assertEquals("Concept II / Watt Bike",xTrainingReadService.getLastXTraining(newUser).get().getTypeOfTraining());
-    }
+    //     Assertions.assertEquals("Concept II / Watt Bike",xTrainingReadService.getLastXTraining(newUser).get().getTypeOfTraining());
+    // }
 
     @Test
     public void checkXTrainingValidation() throws Exception {
