@@ -77,8 +77,9 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
-    exclude '/com/team1/welshrowing/structurizr/GenerateModel'
+    afterTest { desc, result ->
+        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    }
 }
 
 tasks.bootRun.configure {
