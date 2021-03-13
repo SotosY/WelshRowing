@@ -1,4 +1,3 @@
-DROP SCHEMA IF EXISTS `welshrowing` ;
 CREATE SCHEMA `welshrowing`;
 USE `welshrowing`;
 
