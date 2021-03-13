@@ -23,66 +23,66 @@ public class PhysicalTestingTests {
     @Autowired
     private TestEntityManager entityManager;
 
-    @Test
-    public void Createphysicaltestresults1() {
-        PhysicalTest newPhysicalTest = new PhysicalTest();
-        newPhysicalTest.setCoachtesting("James");
-        newPhysicalTest.setDateoftest("23/06/2021");
+//     @Test
+//     public void Createphysicaltestresults1() {
+//         PhysicalTest newPhysicalTest = new PhysicalTest();
+//         newPhysicalTest.setCoachtesting("James");
+//         newPhysicalTest.setDateoftest("23/06/2021");
 
-//        Athlete Info
-        newPhysicalTest.setNameofathlete("Jac");
-        newPhysicalTest.setHomephonenumber("01492329392");
-        newPhysicalTest.setSchoolorcluboruniversity("University");
+// //        Athlete Info
+//         newPhysicalTest.setNameofathlete("Jac");
+//         newPhysicalTest.setHomephonenumber("01492329392");
+//         newPhysicalTest.setSchoolorcluboruniversity("University");
 
-//        Parent Info
-        newPhysicalTest.setNameofparent("Greg");
-        newPhysicalTest.setRelationshiptoathlete("Dad");
-        newPhysicalTest.setContactphone("07492930201");
-        newPhysicalTest.setEmailofguardian("Greg@test.com");
+// //        Parent Info
+//         newPhysicalTest.setNameofparent("Greg");
+//         newPhysicalTest.setRelationshiptoathlete("Dad");
+//         newPhysicalTest.setContactphone("07492930201");
+//         newPhysicalTest.setEmailofguardian("Greg@test.com");
 
-//        Anthropometry
-        newPhysicalTest.setStandingheight(160);
-        newPhysicalTest.setWeight(80);
-        newPhysicalTest.setArmspan(10);
+// //        Anthropometry
+//         newPhysicalTest.setStandingheight(160);
+//         newPhysicalTest.setWeight(80);
+//         newPhysicalTest.setArmspan(10);
 
-//        Concept | Dyno
-        newPhysicalTest.setInjuries("None");
-        newPhysicalTest.setLegpress(200);
-        newPhysicalTest.setArmpress(100);
-        newPhysicalTest.setArmpull(80);
-        newPhysicalTest.setArmpullmax(50);
-
-
-//        Schwinn
-        newPhysicalTest.setScore(100);
-        newPhysicalTest.setObservations("Very Good Candidate");
-
-//        Core and flexibility
-        newPhysicalTest.setBasicscore("50");
-        newPhysicalTest.setNotesonscore("Good Core");
-        newPhysicalTest.setFlexibility("39");
-        newPhysicalTest.setNotesonflexibility("Not so flexible");
-
-//        Training History
-        newPhysicalTest.setPrevioussports("Tennis");
-        newPhysicalTest.setNummonthstraining("10");
-        newPhysicalTest.setNumofsessionperweek("3");
-        newPhysicalTest.setNumofendurancesessions("1");
-        newPhysicalTest.setNumofstrengthsessions("2");
-        newPhysicalTest.setNumofyearstraining("1");
-
-//        follow up
-        newPhysicalTest.setNextStage("Past with flying Colours");
+// //        Concept | Dyno
+//         newPhysicalTest.setInjuries("None");
+//         newPhysicalTest.setLegpress(200);
+//         newPhysicalTest.setArmpress(100);
+//         newPhysicalTest.setArmpull(80);
+//         newPhysicalTest.setArmpullmax(50);
 
 
-        physicalTestRepo.save(newPhysicalTest);
+// //        Schwinn
+//         newPhysicalTest.setScore(100);
+//         newPhysicalTest.setObservations("Very Good Candidate");
 
-        PhysicalTest savedPhysicalTest = physicalTestRepo.save(newPhysicalTest);
+// //        Core and flexibility
+//         newPhysicalTest.setBasicscore("50");
+//         newPhysicalTest.setNotesonscore("Good Core");
+//         newPhysicalTest.setFlexibility("39");
+//         newPhysicalTest.setNotesonflexibility("Not so flexible");
 
-        PhysicalTest existingPhysicalTest = entityManager.find(PhysicalTest.class, savedPhysicalTest.getTestId());
+// //        Training History
+//         newPhysicalTest.setPrevioussports("Tennis");
+//         newPhysicalTest.setNummonthstraining("10");
+//         newPhysicalTest.setNumofsessionperweek("3");
+//         newPhysicalTest.setNumofendurancesessions("1");
+//         newPhysicalTest.setNumofstrengthsessions("2");
+//         newPhysicalTest.setNumofyearstraining("1");
 
-        assertThat(existingPhysicalTest.getTestId()).isEqualTo(newPhysicalTest.getTestId());
+// //        follow up
+//         newPhysicalTest.setNextStage("Past with flying Colours");
 
-    }
+
+//         physicalTestRepo.save(newPhysicalTest);
+
+//         PhysicalTest savedPhysicalTest = physicalTestRepo.save(newPhysicalTest);
+
+//         PhysicalTest existingPhysicalTest = entityManager.find(PhysicalTest.class, savedPhysicalTest.getTestId());
+
+//         assertThat(existingPhysicalTest.getTestId()).isEqualTo(newPhysicalTest.getTestId());
+
+//     }
 
 }
