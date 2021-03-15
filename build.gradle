@@ -76,6 +76,8 @@ dependencies {
 
 }
 apply plugin: 'checkstyle'
+apply plugin: 'java'
+
 checkstyle {
     toolVersion = '8.25'
     checkstyleTest.enabled = false
