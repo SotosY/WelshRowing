@@ -78,14 +78,8 @@ dependencies {
 apply plugin: 'checkstyle'
 checkstyle {
     toolVersion = '8.25'
+    checkstyleTest.enabled = false
     sourceSets = []
-    configFile = rootProject.file("config/checkstyle/checkstyle.xml");
-    showViolations = true
-    ignoreFailures = true
-}
-
-checkstyleTest {
-    enabled = false
 }
 
 tasks.withType(Checkstyle) {
