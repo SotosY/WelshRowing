@@ -84,7 +84,7 @@ checkstyle {
     configFile file("$configDir/checkstyle/checkstyle.xml")
     configProperties.checkstyleSuppressionsPath = file("$configDir/checkstyle/suppressions.xml").absolutePath
     checkstyleTest.enabled = false
-    sourceSets = []
+    ignoreFailures = true
 }
 
 test {
