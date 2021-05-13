@@ -1,6 +1,7 @@
 package com.team1.welshrowing.repository;
 
 import com.team1.welshrowing.domain.Feedback;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -20,6 +21,7 @@ public class FeedbackRepoImpl implements FeedbackRepo {
     }
 
     @Override
+    @Cacheable(cacheNames = "feedback", key = "#id")
     public Optional<Feedback> findById(Long id) {
         return repository.findById(id);
     }

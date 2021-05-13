@@ -2,6 +2,7 @@ package com.team1.welshrowing.repository;
 
 import com.team1.welshrowing.domain.Interview;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -15,6 +16,7 @@ public class InterviewRepoImpl implements InterviewRepo {
     public InterviewRepoImpl(InterviewRepoJPA repository) { this.repository = repository; }
 
     @Override
+    @Cacheable(cacheNames = "interview", key = "#id")
     public Optional<Interview> findByApplicantId(Long id) {
         return repository.findByApplicantId(id);
     }

@@ -3,6 +3,7 @@ package com.team1.welshrowing.repository;
 import com.team1.welshrowing.domain.Applicant;
 import com.team1.welshrowing.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Repository;
@@ -22,6 +23,8 @@ public class ApplicantRepoImpl implements ApplicantRepo {
     @Autowired
     public ApplicantRepoImpl(ApplicantRepoJPA repository) { this.repository = repository; }
 
+    @Override
+    @Cacheable(cacheNames = "applicant", key = "#id")
     public Optional<Applicant> findById(Long id) {
         return repository.findById(id);
     }
